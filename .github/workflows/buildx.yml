@@ -36,4 +36,4 @@ jobs:
           context: .
           platforms: linux/arm/v7
           push: true
-          tags: gounthar/alpine-temurin-builder
+          tags: gounthar/alpine-temurin-builder:armhf
