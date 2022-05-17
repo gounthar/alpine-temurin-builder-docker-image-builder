@@ -1,4 +1,4 @@
-name: ci
+name: Build with docker buildx on several platforms
 
 on:
   push:
