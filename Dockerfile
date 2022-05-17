@@ -1,7 +1,8 @@
 FROM alpine
 
 RUN apk update && apk upgrade && apk add git bash freetype perl openssl openjdk11 autoconf alpine-sdk zip \
-    libxtst-dev libxt-dev libxrender-dev libxrandr-dev cups-dev fontconfig-dev alsa-lib-dev linux-headers && \
+    libxtst-dev libxt-dev libxrender-dev libxrandr-dev cups-dev fontconfig-dev alsa-lib-dev linux-headers \
+    apache-ant && \
     ln -s /usr/bin/keytool /bin/keytool
 
 # ccache seems to be a bad idea with JDK compilation, so let's get rid of it
