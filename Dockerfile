@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk update && apk upgrade -y && apk add git bash freetype perl openssl openjdk11 autoconf alpine-sdk zip \
+RUN apk update && apk upgrade && apk add git bash freetype perl openssl openjdk11 autoconf alpine-sdk zip \
     libxtst-dev libxt-dev libxrender-dev libxrandr-dev cups-dev fontconfig-dev alsa-lib-dev apk add linux-headers && \
     ln -s /usr/bin/keytool /bin/keytool
 
