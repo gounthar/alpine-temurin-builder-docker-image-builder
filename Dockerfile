@@ -13,4 +13,4 @@ RUN git clone https://github.com/adoptium/temurin-build.git && cd temurin-build/
 
 ## && ./makejdk-any-platform.sh -p $(grep -c processor /proc/cpuinfo) -F jdk11u
 
-ENTRYPOINT ["/root/temurin-build/makejdk-any-platform.sh"]
+ENTRYPOINT ["/temurin-build/makejdk-any-platform.sh"]
