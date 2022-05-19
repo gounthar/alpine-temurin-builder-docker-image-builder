@@ -9,7 +9,8 @@ RUN apk update && apk upgrade && apk add git bash freetype perl openssl openjdk1
 # export PATH="/usr/lib/ccache/bin:$PATH"
 ENV JAVA_HOME=/usr/lib/jvm/default-jvm/
 
-RUN git clone https://github.com/adoptium/temurin-build.git && cd temurin-build/ && \
-    ./makejdk-any-platform.sh -p $(grep -c processor /proc/cpuinfo) -F jdk11u
+RUN git clone https://github.com/adoptium/temurin-build.git && cd temurin-build/ 
+
+## && ./makejdk-any-platform.sh -p $(grep -c processor /proc/cpuinfo) -F jdk11u
 
 ENTRYPOINT ["/root/temurin-build/makejdk-any-platform.sh"]
